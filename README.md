@@ -3,11 +3,11 @@ This repository contains data and analytical code for the gene tree to organisma
 
 ## Contents
 In conceptual order:
+- [`duplication.pattern.R`](https://github.com/aphanotus/tree.comparison/blob/main/duplication.pattern.R) is an R script addressing phylogenetic pattern to gene duplication and loss.
 - [`get.orthologs.R`](https://github.com/aphanotus/tree.comparison/blob/main/get.orthologs.R) is an R script file containing 3 functions. 
   - `get.orthologs` is a function that performs BLASTp searches to a local BLAST database. The search query is supplied as an NCBI protein accession number. Searches are restricted to a list of taxa containing NCBI taxids specified in a CSV file. BLAST output can be customized, but defaults to a single line reporting the best match.
   - `create.alignment.from.acc.list` is a function that takes as input a list of GenBank protein accessions numbers, as supplied by `get.orthologs`, pulls the protein to sequences creating a multi-FASTA file, then aligns sequences using Clustal-Omega with default parameters. It also edits sequence names to conform to RAxML expectations.
   - `convert.fa.to.phy` is a short function to convert FASTA files to PHYLIP (`.phy`) format. Mostly just a wrapper for `phylotools::dat2phylip`.
-
 - [`tree.comparisons.R`](https://github.com/aphanotus/tree.comparison/blob/main/tree.comparisons.R) is an R script file containing 7 functions and accompanying code to conduct the tree comparisons from the paper.
   - `quantify.polytomy` - Quantify polytomy in an unrooted tree as a value from 0 (complete resolution of the topology) to 1 (a star tree).
   - `remove.redundant.parentheses` - Remove unnecessary parentheses from e.g. a Newick tree character string.
@@ -17,7 +17,6 @@ In conceptual order:
   - `parsimony.informative.sites` calculates the portion (from 0 to 1) of sites (characters) in a sequence alignment that are parsimony-informative. Defaults to ignoring gaps in this calculation.
   - `mean.pairwise.identity` takes an alignment in the form provided by `phylotools::read.phylip` and makes a pairwise comparison of character identity for all sequences in an alignment. Gaps are not counted as matches. (Gaps are not counted in the numerator or denominator.) The mean identity is returned. Values range from 0 (total disagreement) to 1 (universal sequence identity).
 - [`tree.comparisons.R`](https://github.com/aphanotus/tree.comparison/blob/main/tree.comparisons.R) continues with non-modular code to execute these functions using input alignments and phylogenies using different bootstrap cutoffs for collapse nodes to polytomies. It also includes the code used to create the manuscript figures using `ggplot2`.
-
 - [`organismal.relationships.tre`](https://github.com/aphanotus/tree.comparison/blob/main/organismal.relationships.tre) is a Newick file containing consensus relationships of insect superfamilies and orders  ([Misof et al. 2014](https://www.science.org/doi/10.1126/science.1257570); [Johnson et al. 2018](https://www.pnas.org/content/115/50/12775); [Kawahara et al. 2019](https://www.pnas.org/content/116/45/22657); [McKenna et al. 2019](https://www.pnas.org/content/116/49/24729); [Peters et al. 2017](https://doi.org/10.1016/j.cub.2017.01.027); [Wiegmann et al. 2011](https://www.pnas.org/content/108/14/5690)). 
 
 <img src="https://i.imgur.com/nIc9e9o.png =450x" style="zoom:67%;" />
