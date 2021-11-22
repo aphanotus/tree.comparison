@@ -564,7 +564,7 @@ gene.tree.summary.stats.plot <- df %>%
 
 gene.tree.summary.stats.plot
 
-ggsave("FigS2.gene.tree.summary.stats.plot.pdf",gene.tree.summary.stats.plot,
+ggsave("FigS4.gene.tree.summary.stats.plot.pdf",gene.tree.summary.stats.plot,
        width = 6.5, height = 9, scale = 1.5)
 
 genes.to.label <-
@@ -710,7 +710,7 @@ misc.plots <- ggarrange(
   nrow = 2, ncol = 2, labels = LETTERS,
   common.legend = TRUE, legend="bottom" )
 
-ggsave("FigS3.genetree.comp.misc.plots.pdf", misc.plots,
+ggsave("FigS5.genetree.comp.misc.plots.pdf", misc.plots,
        width = 8, height = 8, scale = 1)
 
 ##########################
@@ -816,7 +816,7 @@ miscBS20.plots <- ggarrange(
   nrow = 2, ncol = 2, labels = LETTERS,
   common.legend = TRUE, legend="bottom" )
 
-ggsave("FigS4.genetree.comp20.plots.pdf", miscBS20.plots,
+ggsave("FigS6.genetree.comp20.plots.pdf", miscBS20.plots,
        width = 8, height = 8, scale = 1)
 
 ##########################
@@ -922,7 +922,7 @@ miscBS80.plots <- ggarrange(
   nrow = 2, ncol = 2, labels = LETTERS,
   common.legend = TRUE, legend="bottom" )
 
-ggsave("FigS5.genetree.comp80.plots.pdf", miscBS80.plots,
+ggsave("FigS7.genetree.comp80.plots.pdf", miscBS80.plots,
        width = 8, height = 8, scale = 1)
 
 ##########################
@@ -1004,7 +1004,7 @@ taxon.representation.plot <- ggtree::rotate(taxon.representation.plot, 58)
 
 taxon.representation.plot
 
-ggsave("FigS6.taxon.representation.plot.pdf", taxon.representation.plot,
+ggsave("FigS3.taxon.representation.plot.pdf", taxon.representation.plot,
        width = 6.5, height = 9, scale = 1)
 
 ##########################
@@ -1204,7 +1204,7 @@ misc.comp.plots <- ggarrange(
   nrow = 3, ncol = 2, labels = LETTERS,
   common.legend = TRUE, legend="bottom" )
 
-ggsave("FigS7.genetree.misc.comp.plots.pdf", misc.comp.plots,
+ggsave("FigS8.genetree.misc.comp.plots.pdf", misc.comp.plots,
        width = 8, height = 12, scale = 1)
 
 
