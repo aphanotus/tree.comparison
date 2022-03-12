@@ -1,6 +1,8 @@
 # tree.comparison
 This repository contains data and analytical code for the gene tree to organismal tree comparisons described by [Laslo, Just and Angelini (2022 *JEZ-B*)](https://doi.org/10.1002/jez.b.23125). Comparisons are made for superfamily/order-level phylogenies constructed for each protein relative to a consensus organismal tree ([Misof et al. 2014](https://www.science.org/doi/10.1126/science.1257570)). Tree distance is based on normalized Clustering Information Distance ([Smith 2020](https://doi.org/10.1093/bioinformatics/btaa614)) implemented in the [TreeDist R package](https://github.com/ms609/TreeDist#treedist).
 
+<img src="https://i.imgur.com/NT3QVeg.jpg" style="zoom:67%;" />
+
 ## Contents
 In conceptual order:
 - [`duplication.pattern.R`](https://github.com/aphanotus/tree.comparison/blob/main/duplication.pattern.R) is an R script addressing phylogenetic pattern to gene duplication and loss.
